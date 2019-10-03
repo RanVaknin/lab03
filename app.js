@@ -6,61 +6,66 @@ var counter = 0;
 
 let userName = prompt('What is your name stranger?');
 alert('Hi there! ' + userName + ' Welcome to my AboutMe page. I\'m happy to have you here.');
-
-let likesDogs = prompt('Do I like dogs?');
-if (likesDogs.toLowerCase() === 'yes' || likesDogs.toLowerCase() === 'y'){
-  alert('correct!');
-  counter++;
-  //console.log("correct!");
-}else if(likesDogs.toLowerCase() === 'no' || likesDogs.toLowerCase() === 'n' ){
-  alert('Incorrect!');
-  //console.log("Incorrect!");
-}else {
-  alert('invalid entry');
-  //console.log("invalid entry");
+function dogFunction(){
+  let likesDogs = prompt('Do I like dogs?');
+  if (likesDogs.toLowerCase() === 'yes' || likesDogs.toLowerCase() === 'y'){
+    alert('correct!');
+    counter++;
+    //console.log("correct!");
+  }else if(likesDogs.toLowerCase() === 'no' || likesDogs.toLowerCase() === 'n' ){
+    alert('Incorrect!');
+    //console.log("Incorrect!");
+  }else {
+    alert('invalid entry');
+    //console.log("invalid entry");
 }
-let showerDaily = prompt('Do I shower every day?');
-if (showerDaily.toLowerCase() === 'yes' || showerDaily.toLowerCase() === 'y'){
-  alert('Thats great! Good hygene is key to living a healthy lifestyle.');
-  counter++;
-  console.log('Thats great! Good hygene is key to living a healthy lifestyle.');
-}else if(showerDaily.toLowerCase() === 'no' || showerDaily.toLowerCase() === 'n'){
-  alert('Yuck! Showering daily is a healthy life choice - you should consider it, however you don\'t have to shampoo daily.');
-  //console.log("Showering daily is a healthy life choice - you should consider it, however you don't have to shampoo daily.");
-}else {
-  alert('invalid entry');
 }
-
-let liveInSeattle = prompt('Do I live in Tacoma?');
-if (liveInSeattle.toLowerCase() === 'yes' || liveInSeattle.toLowerCase() === 'y'){
-  alert('Wrong! I live in Capitol Hill neighbourhood, In Seattle.');
-}else if(liveInSeattle.toLowerCase() === 'no' || liveInSeattle.toLowerCase() === 'n'){
-  alert('You probably know that I live in Capitol Hill in Seattle :)');
-  counter++;
-}else {
-  alert('invalid entry');
+function shouldFunction(){
+  let showerDaily = prompt('Do I shower every day?');
+  if (showerDaily.toLowerCase() === 'yes' || showerDaily.toLowerCase() === 'y'){
+    alert('Thats great! Good hygene is key to living a healthy lifestyle.');
+    counter++;
+    console.log('Thats great! Good hygene is key to living a healthy lifestyle.');
+  }else if(showerDaily.toLowerCase() === 'no' || showerDaily.toLowerCase() === 'n'){
+    alert('Yuck! Showering daily is a healthy life choice - you should consider it, however you don\'t have to shampoo daily.');
+    //console.log("Showering daily is a healthy life choice - you should consider it, however you don't have to shampoo daily.");
+  }else {
+    alert('invalid entry');
+  }
 }
-
-let likesCats = prompt('Do I like cats?');
-if (likesCats.toLowerCase() === 'yes' || likesCats.toLowerCase() === 'y' ){
-  alert('Damn right I do! I have the best cat ever, his name is Biscuit!');
-  counter++;
-}else if(likesCats.toLowerCase() === 'no' || likesCats.toLowerCase() === 'n'){
-  alert('I don\'t like all cats but it\'s safe to say that I like most cats');
-}else {
-  alert('invalid entry');
+function seattle(){
+  let liveInSeattle = prompt('Do I live in Tacoma?');
+  if (liveInSeattle.toLowerCase() === 'yes' || liveInSeattle.toLowerCase() === 'y'){
+    alert('Wrong! I live in Capitol Hill neighbourhood, In Seattle.');
+  }else if(liveInSeattle.toLowerCase() === 'no' || liveInSeattle.toLowerCase() === 'n'){
+    alert('You probably know that I live in Capitol Hill in Seattle :)');
+    counter++;
+  }else {
+    alert('invalid entry');
+  }
 }
-let generalTrivia = prompt('Are there 262 bones in the human body?');
-if (generalTrivia.toLowerCase() === 'yes'|| generalTrivia.toLowerCase() === 'y'){
-  alert('The correct answer is 206.. It\'s ok! You were off by 56 bones.');
-}else if(generalTrivia.toLowerCase() === 'no' || generalTrivia.toLowerCase() === 'n'){
-  alert('Correct! You probaly know that 206 bones is the right answer.');
-  counter++;
-}else {
-  alert('invalid entry');
+function catFunction(){
+  let likesCats = prompt('Do I like cats?');
+  if (likesCats.toLowerCase() === 'yes' || likesCats.toLowerCase() === 'y' ){
+    alert('Damn right I do! I have the best cat ever, his name is Biscuit!');
+    counter++;
+  }else if(likesCats.toLowerCase() === 'no' || likesCats.toLowerCase() === 'n'){
+    alert('I don\'t like all cats but it\'s safe to say that I like most cats');
+  }else {
+    alert('invalid entry');
+  }
 }
-
-
+function triviaFunction(){
+  let generalTrivia = prompt('Are there 262 bones in the human body?');
+  if (generalTrivia.toLowerCase() === 'yes'|| generalTrivia.toLowerCase() === 'y'){
+    alert('The correct answer is 206.. It\'s ok! You were off by 56 bones.');
+  }else if(generalTrivia.toLowerCase() === 'no' || generalTrivia.toLowerCase() === 'n'){
+    alert('Correct! You probaly know that 206 bones is the right answer.');
+    counter++;
+  }else {
+    alert('invalid entry');
+  }
+}
 /*
 var firstQuestion = ['Is the meaning of life 42?','correct!','INCORRECT!'];
 var secondQuestion = ['Do you shower every day?','Thats great! Good hygene is key to living a healthy lifestyle.','Showering daily is a healthy life choice - you should consider it, however you don\'t have to shampoo daily.'];
@@ -123,36 +128,40 @@ for let (i = 0; i < questionList[i]; i++){
 // setUpQuestion(fourthQuestion[0],fourthQuestion[1],fourthQuestion[2]);
 // setUpQuestion(fifthQuestion[0],fifthQuestion[1],fifthQuestion[2]);
 
-const guessNumber = 8;
-for (let i = 0 ; i < 4; i++){
-  let userGuess = prompt('please guess a number from 1 - 10');
-  userGuess = parseInt(userGuess);
-  if (userGuess === guessNumber){
-    // alert('You guessed it! the number is 8!');
-    counter++;
-    break;
-  } else if (userGuess < guessNumber){
-    alert('Your guess is a little too low..');
-  }else if (userGuess > guessNumber){
-    alert('Slow down cowboy.. you went too high.');
-  } else {
-    alert('invalid entry');
-  }
-}
-alert('The correct answer is 8!');
 
-let favoriteFruit = ['banana','watermelon','mango'];
-const numOfGuesses = 5;
-for (let k = 0 ; k < 5 ; k++){
-  let userAnswer = prompt('what is my favorite fruit?');
-  userAnswer = userAnswer.toLowerCase();
-  if(favoriteFruit.includes(userAnswer)){
-    counter++;
-    alert('You are right '+ userAnswer + ' is one of my favorite fruits!');
-    alert('my favorite fruits are '+ favoriteFruit + '.' );
-    break;
-  } else {
-    alert('nope.. try again..');
+function numberGuess(guessNumber){
+  // const guessNumber = 8;
+  for (let i = 0 ; i < 4; i++){
+    let userGuess = prompt('please guess a number from 1 - 10');
+    userGuess = parseInt(userGuess);
+    if (userGuess === guessNumber){
+      // alert('You guessed it! the number is 8!');
+      counter++;
+      break;
+    } else if (userGuess < guessNumber){
+      alert('Your guess is a little too low..');
+    }else if (userGuess > guessNumber){
+      alert('Slow down cowboy.. you went too high.');
+    } else {
+      alert('invalid entry');
+    }
+  }
+  alert('The correct answer is' + ' ' + guessNumber);
+}
+function fruitGuess(foodOne, foodTwo, foodThree){
+  let favoriteFruit = [foodOne, foodTwo, foodThree];
+  const numOfGuesses = 5;
+  for (let k = 0 ; k < 5 ; k++){
+    let userAnswer = prompt('what is my favorite fruit?');
+    userAnswer = userAnswer.toLowerCase();
+    if(favoriteFruit.includes(userAnswer)){
+      counter++;
+      alert('You are right '+ userAnswer + ' is one of my favorite fruits!');
+      alert('my favorite fruits are '+ favoriteFruit + '.' );
+      break;
+    } else {
+      alert('nope.. try again..');
+    }
   }
 }
 /*
@@ -169,6 +178,15 @@ for (let k = 0 ; k < 5 ; k++){
           }
         }
         */
-alert('you have '+ counter +' correct answers out of 7 total.');
-
-alert('Thank you ' + userName + ' for playing my little game. Enjoy my AboutME page.');
+       
+       dogFunction();
+       shouldFunction();
+       seattle();
+       catFunction();
+       triviaFunction();
+       numberGuess(5);
+       fruitGuess('mango', 'watermelon', 'banana');
+       
+       alert('you have '+ counter +' correct answers out of 7 total.');
+       
+       alert('Thank you ' + userName + ' for playing my little game. Enjoy my AboutME page.');
