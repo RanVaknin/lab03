@@ -141,15 +141,15 @@ for (let i = 0 ; i < 4; i++){
 }
 alert('The correct answer is 8!');
 
-let favoriteFruit = ['BANANA','WATERMELON','MANGO'];
+let favoriteFruit = ['banana','watermelon','mango'];
 const numOfGuesses = 5;
 for (let k = 0 ; k < 5 ; k++){
   let userAnswer = prompt('what is my favorite fruit?');
-  userAnswer = userAnswer.toUpperCase();
+  userAnswer = userAnswer.toLowerCase();
   if(favoriteFruit.includes(userAnswer)){
     counter++;
     alert('You are right '+ userAnswer + ' is one of my favorite fruits!');
-    alert('my favorite fruits are '+ favoriteFruit '.' )
+    alert('my favorite fruits are '+ favoriteFruit + '.' );
     break;
   } else {
     alert('nope.. try again..');
