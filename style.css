@@ -78,3 +78,8 @@ ul{
     list-style-type: circle;
     margin-bottom: 40px;
 }
+#myface {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
